@@ -333,5 +333,43 @@ $(document).ready(function() {
 			});
 		});
 	});
+	/* ---------------------------------------------------------------------- */
+	/*	Carousel
+	 /* ---------------------------------------------------------------------- */
+	$(window).load(function(){
+		$('#carousel-projects').carouFredSel({
+			responsive: true,
+			items       : {
+				width       : 200,
+				height      : 295,
+				visible     : {
+					min         : 1,
+					max         : 4
+				}
+			},
+			width: '200px',
+			height: '295px',
+			auto: true,
+			circular	: true,
+			infinite	: false,
+			prev : {
+				button		: "#car_prev",
+				key			: "left",
+			},
+			next : {
+				button		: "#car_next",
+				key			: "right",
+			},
+			swipe: {
+				onMouse: true,
+				onTouch: true
+			},
+			scroll: {
+				easing: "",
+				duration: 1200
+			}
+		});
+	});
+
 
 });
