@@ -1,0 +1,49 @@
+/************************************BACKGROUND COLOR START************************************/
+.colorbg, .navbar-nav>li.active>a, .navbar-nav>li.active>a:hover, .navbar-nav>li.active>a:focus, .navbar-nav>li>a:hover,
+.navbar-nav>li>a:focus, .dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus, .extra-nav-class a.dropdown-toggle,
+.car-highlight1, .car-smallcircle, .carouselText2, .icon-box-top i:hover, .grey-box-icon:hover .fontawesome-icon.circle-white,
+.grey-box-icon.active .fontawesome-icon.circle-white, .active i.fontawesome-icon, .home-features .icon, .copyright,
+.buttoncolor, .btn-default, #accordion div h4:before, #accordion div.active h4:before, #skill i, .service-fancybox:hover,
+.service-fancybox.featured, .cbp_tmtimeline>li .cbp_tmicon, .active-header, .active-header:hover, #filter ul li .selected,
+.drop-cap, .captionicons, .popular .vuzz-pricing-cost, .popular .vuzz-pricing-per, .popular .vuzz-button,
+.popular .vuzz-button.buttonprice, .fancyy-box:hover, .fancyy-box.featured, .pagination>.active>a, .pagination>.active>span,
+.pagination>.active>a:hover, .pagination>.active>span:hover, .pagination>.active>a:focus, .pagination>.active>span:focus,
+a.prev, a.next, a.prev:hover, a.next:hover, #back-top span
+{
+	background-color: #20c2a2 !important;
+}
+.pageheader-default .semitransparentbg, .bgarea-semitransparent {
+	background-color: rgba(32, 194, 162, 0.80)!important;
+}
+/************************************BACKGROUND COLOR END************************************/
+
+
+
+/************************************TEXT COLOR START************************************/
+a, .colortext, .fontawesome-icon.circle-white, .btn-minimal:hover, .sidebar h4, .nav-tabs>.active>a, .nav-tabs>.active>a:hover,
+.service-fancybox:hover i, .service-fancybox.featured .circleicon i, .service-fancybox.black .circleicon i, .services i,
+.landingpage-button, .landingpage-button span, .landingpage-button strong, .landingpage-button i, .fancyy-box:hover i,
+.fancyy-box.featured .circleicon i, .fancyy-box.black .circleicon i
+{
+	color: #20c2a2;
+}
+/************************************TEXT COLOR END*************************************/
+
+
+
+/************************************BORDER COLOR************************************/
+.pagination>.active>a, .pagination>.active>span, .pagination>.active>a:hover, .pagination>.active>span:hover,
+.pagination>.active>a:focus, .pagination>.active>span:focus {
+	border-color: #20c2a2;
+}
+.vuzz-pricing-table>div.popular {
+	border-top-color: #20c2a2;
+}
+.navbar-nav>li.active>a:before, .navbar-nav>li>a:hover:before, .navbar-nav>li>a:focus:before,
+.extra-nav-class a.dropdown-toggle:before {
+	border-bottom-color: #20c2a2;
+}
+.panel, .panel1, .panel2, blockquote {
+	border-left-color: #20c2a2;
+}
+/************************************BORDER COLOR END************************************/
