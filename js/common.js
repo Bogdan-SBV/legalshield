@@ -1,18 +1,9 @@
 $(document).ready(function() {
 	"use strict";
 
-	//Header MENU
-	$('.navbar .dropdown').hover(function() {
-		$(this).addClass('extra-nav-class').find('.dropdown-menu').first().stop(true, true).delay(50).slideDown();
-	}, function() {
-		var na = $(this)
-		na.find('.dropdown-menu').first().stop(true, true).delay(100).slideUp('fast', function() {
-			na.removeClass('extra-nav-class')
-		})
-	});
-
 	// Responsive MENU
-	$("#nav").tinyNav({
+	var tinyNav = $("#nav");
+	tinyNav.tinyNav({
 		active: 'selected',
 		header: 'MENU',
 		label: ''
@@ -20,26 +11,31 @@ $(document).ready(function() {
 
 	//Scrolling Effect
 	$(window).scroll(function() {
+		var legalmenu = $(".legalmenu");
+		var tiny = 'tiny';
+		var backtop = $('#back-top');
 		if ($(document).scrollTop() == 0) {
-			$('.legalmenu').removeClass('tiny');
+			legalmenu.removeClass(tiny);
 		} else {
-			$('.legalmenu').addClass('tiny');
+			legalmenu.addClass(tiny);
 		}
 
 		if ($(this).scrollTop() > 600) {
-			$('#back-top').fadeIn();
+			backtop.fadeIn();
 		} else {
-			$('#back-top').fadeOut();
+			backtop.fadeOut();
 		}
 
 	});
 
-	$('.textItem').quovolver();
+	var textItem = $('.textItem');
+	textItem.quovolver();
 
 
 	// E-mail Ajax Send
 
-	$(".callback").on('submit',function() { //Change
+	var callback = $(".callback");
+	callback.on('submit',function() { //Change
 		var th = $(this);
 		$.ajax({
 			type: "POST",
@@ -57,8 +53,8 @@ $(document).ready(function() {
 	});
 
 
-
-	$("#back-top").hide();
+	var backtop = $("#back-top");
+	backtop.hide();
 
 	$('#back-top a').on('click', function() {
 		$('body,html').animate({
@@ -68,95 +64,99 @@ $(document).ready(function() {
 	});
 
 
-	$('input, textarea').placeholder();
+	var inputarea = $('input, textarea');
+	var animated = $('.animated');
+	inputarea.placeholder();
+	animated.appear();
 
-	$('.animated').appear();
-	$(document.body).on('appear', '.fade', function() {
+	var docBody = $(document.body);
+	var appear = 'appear';
+	docBody.on(appear, '.fade', function() {
 		$(this).each(function() {
 			$(this).addClass('anim-fade')
 		});
 	});
-	$(document.body).on('appear', '.slidea', function() {
+	docBody.on(appear, '.slidea', function() {
 		$(this).each(function() {
 			$(this).addClass('anim-slide')
 		});
 	});
-	$(document.body).on('appear', '.hatch', function() {
+	docBody.on(appear, '.hatch', function() {
 		$(this).each(function() {
 			$(this).addClass('anim-hatch')
 		});
 	});
-	$(document.body).on('appear', '.entrance', function() {
+	docBody.on(appear, '.entrance', function() {
 		$(this).each(function() {
 			$(this).addClass('anim-entrance')
 		});
 	});
-	$(document.body).on('appear', '.fadeInUpNow', function() {
+	docBody.on(appear, '.fadeInUpNow', function() {
 		$(this).each(function() {
 			$(this).addClass('fadeInUp')
 		});
 	});
-	$(document.body).on('appear', '.fadeInDownNow', function() {
+	docBody.on(appear, '.fadeInDownNow', function() {
 		$(this).each(function() {
 			$(this).addClass('fadeInDown')
 		});
 	});
-	$(document.body).on('appear', '.fadeInLeftNow', function() {
+	docBody.on(appear, '.fadeInLeftNow', function() {
 		$(this).each(function() {
 			$(this).addClass('fadeInLeft')
 		});
 	});
-	$(document.body).on('appear', '.fadeInRightNow', function() {
+	docBody.on(appear, '.fadeInRightNow', function() {
 		$(this).each(function() {
 			$(this).addClass('fadeInRight')
 		});
 	});
-	$(document.body).on('appear', '.fadeInUpBigNow', function() {
+	docBody.on(appear, '.fadeInUpBigNow', function() {
 		$(this).each(function() {
 			$(this).addClass('fadeInUpBig')
 		});
 	});
-	$(document.body).on('appear', '.fadeInDownBigNow', function() {
+	docBody.on(appear, '.fadeInDownBigNow', function() {
 		$(this).each(function() {
 			$(this).addClass('fadeInDownBig')
 		});
 	});
-	$(document.body).on('appear', '.fadeInLeftBigNow', function() {
+	docBody.on(appear, '.fadeInLeftBigNow', function() {
 		$(this).each(function() {
 			$(this).addClass('fadeInLeftBig')
 		});
 	});
-	$(document.body).on('appear', '.fadeInRightBigNow', function() {
+	docBody.on(appear, '.fadeInRightBigNow', function() {
 		$(this).each(function() {
 			$(this).addClass('fadeInRightBig')
 		});
 	});
-	$(document.body).on('appear', '.fadeInNow', function() {
+	docBody.on(appear, '.fadeInNow', function() {
 		$(this).each(function() {
 			$(this).addClass('fadeIn')
 		});
 	});
-	$(document.body).on('appear', '.flashNow', function() {
+	docBody.on(appear, '.flashNow', function() {
 		$(this).each(function() {
 			$(this).addClass('flash')
 		});
 	});
-	$(document.body).on('appear', '.shakeNow', function() {
+	docBody.on(appear, '.shakeNow', function() {
 		$(this).each(function() {
 			$(this).addClass('shake')
 		});
 	});
-	$(document.body).on('appear', '.bounceNow', function() {
+	docBody.on(appear, '.bounceNow', function() {
 		$(this).each(function() {
 			$(this).addClass('bounce')
 		});
 	});
-	$(document.body).on('appear', '.tadaNow', function() {
+	docBody.on(appear, '.tadaNow', function() {
 		$(this).each(function() {
 			$(this).addClass('tada')
 		});
 	});
-	$(document.body).on('appear', '.swingNow', function() {
+	docBody.on(appear, '.swingNow', function() {
 		$(this).each(function() {
 			$(this).addClass('swing')
 		});
@@ -164,10 +164,12 @@ $(document).ready(function() {
 
 
 	//CALL TESTIMONIAL ROTATOR
-	$('#cbp-qtrotator').cbpQTRotator();
+	var cbpqt = $('#cbp-qtrotator');
+	cbpqt.cbpQTRotator();
 
 	//CALL PRETTY PHOTO
-	$("a[data-gal^='prettyPhoto']").prettyPhoto({social_tools:'', animation_speed: 'normal' , theme: 'dark_rounded'});
+	var prettyPhoto = $("a[data-gal^='prettyPhoto']");
+	prettyPhoto.prettyPhoto({social_tools:'', animation_speed: 'normal' , theme: 'dark_rounded'});
 
 
 	//MASONRY
@@ -182,10 +184,12 @@ $(document).ready(function() {
 			}
 		});
 	});
+
+	var selected = 'selected';
 	$('#filter a').on('click', function (event) {
-		$('a.selected').removeClass('selected');
+		$('a.selected').removeClass(selected);
 		var $this = $(this);
-		$this.addClass('selected');
+		$this.addClass(selected);
 		var selector = $this.attr('data-filter');
 		$container.isotope({
 			filter: selector
@@ -194,8 +198,9 @@ $(document).ready(function() {
 	});
 
 	//ROLL ON HOVER
-	$(".roll").css("opacity","0");
-	$(".roll").hover(function () {
+	var roll = $(".roll");
+	roll.css("opacity","0");
+	roll.hover(function () {
 			$(this).stop().animate({
 				opacity: .8
 			}, "slow");
@@ -207,27 +212,31 @@ $(document).ready(function() {
 		});
 
 
-
 	//	Accordion 1
 
+	var accordionHeader = $('.accordion-header');
+	var accordionContent = $('.accordion-content');
+	var inactiveHead = 'inactive-header';
+	var activeHead = 'active-header';
+	var openContent = 'open-content';
+	var contentwidth = accordionHeader.width();
 	//Add Inactive Class To All Accordion Headers
-	$('.accordion-header').toggleClass('inactive-header');
+	accordionHeader.toggleClass(inactiveHead);
 	//Set The Accordion Content Width
-	var contentwidth = $('.accordion-header').width();
-	$('.accordion-content').css({'width' : contentwidth });
+	accordionHeader.css({'width' : contentwidth });
 	//Open The First Accordion Section When Page Loads
-	$('.accordion-header').first().toggleClass('active-header').toggleClass('inactive-header');
-	$('.accordion-content').first().slideDown().toggleClass('open-content');
+	accordionHeader.first().toggleClass(activeHead).toggleClass(inactiveHead);
+	accordionContent.first().slideDown().toggleClass(openContent);
 	// The Accordion Effect
-	$('.accordion-header').on('click', function () {
+	accordionHeader.on('click', function () {
 		if($(this).is('.inactive-header')) {
-			$('.active-header').toggleClass('active-header').toggleClass('inactive-header').next().slideToggle().toggleClass('open-content');
-			$(this).toggleClass('active-header').toggleClass('inactive-header');
-			$(this).next().slideToggle().toggleClass('open-content');
+			$('.active-header').toggleClass(activeHead).toggleClass(inactiveHead).next().slideToggle().toggleClass(openContent);
+			$(this).toggleClass(activeHead).toggleClass(inactiveHead);
+			$(this).next().slideToggle().toggleClass(openContent);
 		}
 		else {
-			$(this).toggleClass('active-header').toggleClass('inactive-header');
-			$(this).next().slideToggle().toggleClass('open-content');
+			$(this).toggleClass(activeHead).toggleClass(inactiveHead);
+			$(this).next().slideToggle().toggleClass(openContent);
 		}
 	});
 
@@ -235,50 +244,58 @@ $(document).ready(function() {
 	//	Accordion 2
 
 	var clickElem = $('#accordion div h4');
+	var active = 'active';
 	clickElem.on('click', function(){
 		var $this = $(this),
 			parentCheck = $this.parent('div');
-		if( !parentCheck.hasClass('active')) {
+		if( !parentCheck.hasClass(active)) {
 			var accordItems = $('#accordion div');
-			accordItems.removeClass('active');
-			parentCheck.addClass('active');
+			accordItems.removeClass(active);
+			parentCheck.addClass(active);
 		}
 	});
 
 	//	Tabs1&2
 
-		$('#horizontalTab').easyResponsiveTabs({
-			type: 'default', //Types: default, vertical, accordion
-			width: 'auto', //auto or any width like 600px
-			fit: true   // 100% fit in a container
-		});
-		$('#verticalTab').easyResponsiveTabs({
-			type: 'vertical',
-			width: 'auto',
-			fit: true
-		});
+	var horTab = $('#horizontalTab');
+	var verTab = $('#verticalTab');
+	horTab.easyResponsiveTabs({
+		type: 'default', //Types: default, vertical, accordion
+		width: 'auto', //auto or any width like 600px
+		fit: true   // 100% fit in a container
+	});
+	verTab.easyResponsiveTabs({
+		type: 'vertical',
+		width: 'auto',
+		fit: true
+	});
 
 	//	Tabs3
-
-	$('#myTab a').on('click', function (e) {
-		e.preventDefault()
-		$(this).tab('show')
-	})
+	var myTab = $('#myTab a');
+	myTab.on('click', function (e) {
+		e.preventDefault();
+		$(this).tab('show');
+	});
 
 	//	Toggles
 
-	$('.faqs dd').hide(); // Hide all DDs inside .faqs
-	$('.faqs dt').hover(function(){$(this).addClass('hover')},function(){$(this).removeClass('hover')}).on('click', function(){ // Add class "hover" on dt when hover
+	var dd = $('.faqs dd');
+	var dt = $('.faqs dt');
+	var hove = 'hover';
+	dd.hide(); // Hide all DDs inside .faqs
+	dt.hover(function(){$(this).addClass(hove)},function(){$(this).removeClass(hove)}).on('click', function(){ // Add class "hover" on dt when hover
 		$(this).next().slideToggle('normal'); // Toggle dd when the respective dt is clicked
 	});
 
 	var $body = $('body');
+	var onOff = 'on off';
 	$(window).load(function(){
-		$body.toggleClass('on off');
-		$('#trigger').on('click',function() {
-			$body.toggleClass('on off');
+		$body.toggleClass(onOff);
+		var trigger = $('#trigger');
+		trigger.on('click',function() {
+			$body.toggleClass(onOff);
 			setTimeout(function() {
-				$body.toggleClass('on off');
+				$body.toggleClass(onOff);
 			}, 2000)
 		});
 
@@ -333,11 +350,12 @@ $(document).ready(function() {
 			});
 		});
 	});
-	/* ---------------------------------------------------------------------- */
-	/*	Carousel
-	 /* ---------------------------------------------------------------------- */
+
+
+	//	Carousel
 	$(window).load(function(){
-		$('#carousel-projects').carouFredSel({
+		var carouselProject = $('#carousel-projects');
+		carouselProject.carouFredSel({
 			responsive: true,
 			items       : {
 				width       : 200,
@@ -361,6 +379,7 @@ $(document).ready(function() {
 				key			: "right",
 			},
 			swipe: {
+
 				onMouse: true,
 				onTouch: true
 			},
